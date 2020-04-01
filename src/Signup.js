@@ -27,7 +27,6 @@ export default class Signup extends Component {
         .catch((error) => {
             console.log(error)
         })
-        // let UserDataRef = fire.database().ref("userData").orderByKey().limitToLast
         fire.database().ref("userData").push({firstName:this.state.firstName,lastName:this.state.lastName,email:this.state.email,password:this.state.password})
         this.setState({
             firstName:"",
